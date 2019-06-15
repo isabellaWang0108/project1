@@ -1,0 +1,42 @@
+@font-face {
+    font-family: SuisseIntl-SemiBold;
+    src: url("https://wangx733.github.io/alonellaw/SuisseIntl-SemiBold.otf");
+    }
+    @font-face {
+    font-family: SuisseIntl-Regular;
+    src: url("https://wangx733.github.io/alonellaw/SuisseIntl-Regular.otf");
+    }
+
+
+    h1, h2, h3, h4 {
+        font-family: SuisseIntl-SemiBold;
+    }
+    p{
+        font-family: SuisseIntl-Regular;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size:26px;
+    }
+    h3{
+        font-size:21px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+    h1{
+
+    }
+    .columnForIntros{
+        grid-column: 3/10;
+    }
