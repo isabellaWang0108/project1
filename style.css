@@ -7,10 +7,10 @@
     src: url("font/SuisseIntl-Regular.otf");
     }
 
-    h1, h2, h3, h4, button {
+    h1, h2, h3, h4, .arrivalTime,.minuteBefore,button,h5 {
         font-family: SuisseIntl-SemiBold;
     }
-    p,h5,label,span{
+    p,label,span{
         font-family: SuisseIntl-Regular;
     }
     h1{
@@ -24,6 +24,12 @@
         font-size:36px;
         text-align: center;
         grid-column: 1/13;
+        z-index: 2;
+        margin-top:50px;
+    }
+    h3{
+        font-size:21px;
+        color:black;
         z-index: 2;
     }
   
@@ -125,13 +131,79 @@
         padding:8px 8px 8px 8px;
     }
     #siteSearch {
-        grid-column: 2/5;
+        text-align: left;
+        color: black;
+        grid-column: 2/4;
         font-size:11px;
-        background-color:linear-gradient(180deg, #FBD384 0%, #E5616F 100%)
+        border:solid;
+        border-image:linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
+        border-image-slice: 0 30% 30;
+        padding: 0 0 0 10px;
+    }
+    label img{
+        margin-left: 6vw;
+    }
+    #container-for-content{
+        margin-top:80px;
+        grid-column: 2/12;
     }
     .bullet{
+        height: 20px;
+        width: 20px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
         background-image: linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
+       margin:0 20px 0px 0;
+       
     }
-    #container{
-        
-    }
+.arivalTime, .minuteBefore{
+    font-size:21px;
+    z-index: 2;
+    margin:10px 0 5px 0;
+}
+.date{
+    margin-left: -20px;
+}
+.event{
+    margin: 15px 0 15px 20px;
+    width:100%;
+    display: inline-block;
+    border:solid;
+    border-image:linear-gradient(-90deg, #FBD384 0%, #E5616F 100%);
+    border-image-slice: 0 0% 25;
+}
+.eventTitle{
+    width:20vw;
+    display: inline-block;
+}
+.address{
+    width:20vw;
+    opacity:.5;
+    display: inline-block;
+    margin-top: 5px;
+    font-size:11px;
+}
+.arrivalTimeClass{
+    width:20vw;
+    display: inline-block;
+}
+.minutesBeforeClass{
+    width:20vw;
+    display: inline-block;
+}
+input.minuteBefore{
+    width:15px;
+    height:20px;
+    padding: 5px 15px 5px 15px;
+    margin: 0 5px 0 5px;
+    border:none;
+    background: linear-gradient(-90deg, #FBD384 0%, #E5616F 100%);
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:white;
+}
