@@ -19,6 +19,7 @@
         text-align: center;
         grid-column: 1/13;
         z-index: 2;
+        color: #4A90E2;
     }
     h2{
         font-size:36px;
@@ -74,10 +75,9 @@
       
     }
     button{
-        background-color: transparent;
-        border:solid;
-        border-width:2px;
-        color:black;
+        background-color: #2A80E5;
+        border:none;
+        color:white;
         z-index: 2;
         font-size: 26px;
         grid-column: 5/9;
@@ -94,7 +94,7 @@
         z-index:2;
         border:solid;
         border-width:2px;
-        color:black;
+        color:#2A80E5;
         background-color:transparent;
         font-size: 21px;
         grid-column: 4/10;
@@ -102,6 +102,14 @@
         margin:20px 0 20px 0;
         
     }
+  #signUp{
+    margin:20px 0 20px 0;
+    background-color: black;
+    color:white;
+  }
+  #signUp:hover{
+      color:#2A80E5;
+  }
     section{
         grid-column: 4/10;
         z-index: 2;
@@ -111,7 +119,10 @@
         margin: 10px 10px 10px 0 ;
     }
     .pretty .state label:before {
-        border-color: black;
+        border-color:#2A80E5;
+    }
+    .pretty.p-default input:checked~.state label:after{
+        background-color:#2A80E5!important;
     }
     .pretty{
         z-index:100;
@@ -160,6 +171,10 @@
     font-size:21px;
     z-index: 2;
     margin:10px 0 5px 0;
+    color:black;
+}
+.arrivalTime{
+    color:#4A90E2;
 }
 .date{
     margin-left: -20px;
@@ -191,20 +206,26 @@
     width:20vw;
     display: inline-block;
 }
-input.minuteBefore{
+input[type=text].minuteBefore{
     width:15px;
     height:20px;
     padding: 5px 15px 5px 15px;
     margin: 0 5px 0 5px;
     border:none;
+    color:black;
     background: linear-gradient(-90deg, #FBD384 0%, #E5616F 100%);
 }
 a{
     text-decoration: none;
-    color:black;
+    color:white;
 }
 a:hover{
     color:white;
+}
+
+::placeholder{
+    color:black;
+    opacity:.5;
 }
 @media only screen and (max-width: 865px) {
     h1{
