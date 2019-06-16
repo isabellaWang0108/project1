@@ -55,9 +55,7 @@
         grid-template-columns: repeat(12,1fr);
         
     }
-    h1{
 
-    }
     .columnForIntros{
         grid-column: 4/10;
     }
@@ -67,7 +65,7 @@
     .background{
         top:0;
         left:0;
-        position: absolute;
+        position: fixed;
         z-index: 1;
         height: 100%;
         width:100%;
@@ -84,7 +82,7 @@
         font-size: 26px;
         grid-column: 5/9;
         padding:5px 15px 5px 15px;
-        margin-top:50px;
+        margin:50px 0 50px 0;
         cursor: pointer;
     }
     button:hover{
@@ -123,17 +121,18 @@
         opacity:.5;
         padding: 0 40px 0 5px;
     }
-    button#googleCalendar{
+    .calendars{
         font-size:21px;
         color:white;
         background-color: #4A90E2;
         border:none;
         padding:8px 8px 8px 8px;
+        
     }
     #siteSearch {
         text-align: left;
         color: black;
-        grid-column: 2/4;
+        grid-column: 2/5;
         font-size:11px;
         border:solid;
         border-image:linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
@@ -157,7 +156,7 @@
        margin:0 20px 0px 0;
        
     }
-.arivalTime, .minuteBefore{
+.arrivalTime, .minuteBefore{
     font-size:21px;
     z-index: 2;
     margin:10px 0 5px 0;
@@ -178,10 +177,10 @@
     display: inline-block;
 }
 .address{
-    width:20vw;
+    width:15vw;
     opacity:.5;
     display: inline-block;
-    margin-top: 5px;
+    margin: 5px 20px 0 -20px;
     font-size:11px;
 }
 .arrivalTimeClass{
@@ -207,3 +206,164 @@ a{
 a:hover{
     color:white;
 }
+@media only screen and (max-width: 865px) {
+    h1{
+        margin: 20vw 0 15vw 0;
+    }
+    .columnForIntros{
+        grid-column: 3/11;
+        
+    }
+    button{
+        margin-top:20vw;
+    }
+    .calendars{
+        margin:40px 0 40px 0;
+    }
+    .innerPage{
+        grid-column: 2/6;
+        text-align: left
+    }
+    label img{
+        margin-top: 9vw;
+        margin-left:5vw;
+    }
+    #siteSearch {
+        grid-column: 7/12;
+        height: 20px;
+        margin-top: 9vw;
+    }
+    #container-for-content{
+        margin-top:60px;
+       
+    }
+    .event{
+        display: block;
+ 
+    }
+    .eventTitle{
+        display:block;
+        width: 45vw;
+    }
+    .address{
+        display: block;
+        margin-left: 0;
+        width: 45vw;
+    }
+    .arrivalTimeClass{
+        display:block;
+        width: 45vw;
+    }
+    .minutesBeforeClass{
+        display: block;
+        width: 45vw;
+    }
+
+}
+@media only screen and (max-width: 670px) {
+    h1{
+        font-size: 40px;
+        margin: 15vw 0 25vw 0;
+
+    }
+    h2{
+        font-size:28px;
+    }
+    h3{
+        font-size: 16px;
+        font-family: SuisseIntl-Regular;
+    }
+
+    h4{
+        font-size:16px;
+    }
+    label{
+        font-size:16px;
+    }
+    h5{
+        color:#F4B27E;
+    }
+
+    p{
+        font-size: 16px;
+    }
+    
+    .columnForIntros{
+        grid-column: 2/12;
+        line-height: 25px;
+    }
+    button{
+        grid-column: 2/12;
+        font-size:21px;
+        margin-top:20vw;
+    }
+    input[type=text],section{
+        grid-column: 2/12;
+        font-size:18px;
+    }
+    #preferredTime{
+        width:15vw;
+        text-align: center;
+        margin-left: 15vw;
+    }
+    .pretty{
+        margin: 3vw 10vw 5vw 14vw;
+    }
+    .calendars{
+        font-size:16px;
+        width:100%;
+        margin:20px 0 20px 0;
+    }
+
+    .innerPage{
+        grid-column: 2/13;
+        text-align: left
+    }
+    label img{
+        margin-top: 4vw;
+        margin-left:7vw;
+    }
+    #siteSearch {
+        grid-column: 2/11;
+        height: 20px;
+        margin-top: 4vw;
+    }
+    #container-for-content{
+        margin-top:20px;
+       grid-column: 1/13;
+    }
+    .event{
+        display: block;
+        width: 90%;
+    }
+    .eventTitle{
+        display:block;
+        width: 100%;
+    }
+    .address{
+        display: block;
+        margin-left: 0;
+        width: 100%;
+    }
+    .arrivalTimeClass{
+        display:block;
+        width: 100%;
+    }
+    .minutesBeforeClass{
+        display: block;
+        width: 100%;
+    }
+    .date{
+        margin-left: 6vw;
+    }
+    .bullet{
+        height: 15px;
+        width: 15px;
+       
+    }
+    .arrivalTime{
+        font-size:18px;
+    }
+ 
+}
+
