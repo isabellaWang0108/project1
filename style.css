@@ -1,31 +1,45 @@
 @font-face {
     font-family: SuisseIntl-SemiBold;
-    src: url("https://wangx733.github.io/alonellaw/SuisseIntl-SemiBold.otf");
+    src: url("font/SuisseIntl-SemiBold.otf");
     }
-    @font-face {
+@font-face {
     font-family: SuisseIntl-Regular;
-    src: url("https://wangx733.github.io/alonellaw/SuisseIntl-Regular.otf");
+    src: url("font/SuisseIntl-Regular.otf");
     }
 
-
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, button {
         font-family: SuisseIntl-SemiBold;
     }
-    p{
+    p,h5,label,span{
         font-family: SuisseIntl-Regular;
     }
     h1{
         font-size: 60px;
+        margin-top: 100px;
+        text-align: center;
+        grid-column: 1/13;
+        z-index: 2;
     }
     h2{
-        font-size:26px;
+        font-size:36px;
+        text-align: center;
+        grid-column: 1/13;
+        z-index: 2;
     }
-    h3{
+  
+    h4{
+        font-size:21px;
+        z-index: 2;
+        margin:10px 0 5px 0;
+    }
+    label{
         font-size:21px;
     }
-    h4{
+    h5{
         font-size: 16px;
+        z-index: 2;
     }
+
     p{
         font-size: 16px;
     }
@@ -33,10 +47,91 @@
     body{
         display: grid;
         grid-template-columns: repeat(12,1fr);
+        
     }
     h1{
 
     }
     .columnForIntros{
-        grid-column: 3/10;
+        grid-column: 4/10;
+    }
+    .intro{
+        top:396px;
+    }
+    .background{
+        top:0;
+        left:0;
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width:100%;
+        background-color: #E5616F; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom,#FBD384,#E5616F);
+      
+    }
+    button{
+        background-color: transparent;
+        border:solid;
+        border-width:2px;
+        color:black;
+        z-index: 2;
+        font-size: 26px;
+        grid-column: 5/9;
+        padding:5px 15px 5px 15px;
+        margin-top:50px;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color:black;
+        color:white;
+        border:none;
+    }
+    input[type=text]{
+        z-index:2;
+        border:solid;
+        border-width:2px;
+        color:black;
+        background-color:transparent;
+        font-size: 21px;
+        grid-column: 4/10;
+        padding:8px 8px 8px 8px;
+        margin:20px 0 20px 0;
+        
+    }
+    section{
+        grid-column: 4/10;
+        z-index: 2;
+        margin-top:10px;
+    }
+    #preferredTime{
+        margin: 10px 10px 10px 0 ;
+    }
+    .pretty .state label:before {
+        border-color: black;
+    }
+    .pretty{
+        z-index:100;
+    }
+    span{
+        font-size:11px;
+        opacity:.5;
+        padding: 0 40px 0 5px;
+    }
+    button#googleCalendar{
+        font-size:21px;
+        color:white;
+        background-color: #4A90E2;
+        border:none;
+        padding:8px 8px 8px 8px;
+    }
+    #siteSearch {
+        grid-column: 2/5;
+        font-size:11px;
+        background-color:linear-gradient(180deg, #FBD384 0%, #E5616F 100%)
+    }
+    .bullet{
+        background-image: linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
+    }
+    #container{
+        
     }
