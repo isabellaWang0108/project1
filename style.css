@@ -90,7 +90,7 @@
         color:white;
         border:none;
     }
-    input[type=text]{
+    input[type=text],input[type=email],input[type=password],input[type=tel]{
         z-index:2;
         border:solid;
         border-width:2px;
@@ -222,6 +222,7 @@
     width:20vw;
     display: inline-block;
 }
+
 input[type=text].minuteBefore{
     width:15px;
     height:20px;
