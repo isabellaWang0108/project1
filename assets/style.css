@@ -13,7 +13,7 @@
     position: absolute;
     top:5px;
     left:5px;
-    width:5em;
+    width:8em;
 }
 
 
@@ -121,7 +121,7 @@ button.signIn {
     top:3px;
     right: 5px;
     border: none;
-    font-size: 11px;
+    font-size: 14px;
     background: none;
     margin: 0px 0 0px 0;
 }
@@ -364,6 +364,10 @@ input[type=text].minuteBefore {
 }
 
 @media only screen and (max-width: 670px) {
+    #logo{
+        width:7em;
+    }
+
     h1 {
         font-size: 40px;
         margin: 30vw 0 20vw 0;
