@@ -8,7 +8,7 @@
     <title>Dear Time</title>
     <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet"> </link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
-    <link href="style.css" rel="stylesheet"></link>
+    <link href="../style.css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <h2 class="animated slideInUp fast">Tell us about you</h2>
 
     <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
-    <input type="text" class="animated fadeIn slow" id="number" placeholder="Your Phone Number 0000000000">
+    <input type="text" class="animated fadeIn slow" id="number" placeholder="Your Phone Number XXX-XXX-XXXX">
     <input type="text" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
     <input type="text" class="animated fadeIn slow" id="password" placeholder="Password">
 
@@ -51,8 +51,11 @@
         <!-- <button id="signUp">Ready to Go!</button> -->
 
     </section>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="../scripts/account.js"></script>
 </body>
 
 </html>
