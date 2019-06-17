@@ -38,7 +38,7 @@ h1 {
 h2 {
     font-size: 36px;
     text-align: center;
-    width:100%;
+    grid-column: 1/13;
     z-index: 2;
     margin-top: 50px;
 }
@@ -55,25 +55,20 @@ h4 {
     margin: 10px 0 5px 0;
 }
 
-
-#allTheSignUp{
-    position:absolute;
-    z-index:3;
-}
 label {
     font-size: 21px;
 }
 
 h5 {
     font-size: 16px;
-    z-index: 3;
+    z-index: 2;
 }
 
 p {
     font-size: 16px;
 }
 
-body {
+#allTheSignUp, #allTheSignIn {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -102,7 +97,7 @@ button {
     background-color: #2A80E5;
     border: none;
     color: white;
-    z-index: 3;
+    z-index: 2;
     font-size: 26px;
     grid-column: 5/9;
     padding: 5px 15px 5px 15px;
@@ -120,20 +115,20 @@ input[type=text],
 input[type=email],
 input[type=password],
 input[type=tel] {
-    z-index: 3;
+    z-index: 2;
     border: solid;
     border-width: 2px;
     color: #2A80E5;
     background-color: transparent;
     font-size: 21px;
-    width:50%;
+    grid-column: 4/10;
     padding: 8px 8px 8px 8px;
-    margin: 20px 4vw 20px 24vw;
+    margin: 20px 0 20px 0;
 }
 
 .signUp {
-    z-index: 3;
-    margin-left:30%;
+    z-index: 2;
+    grid-column: 5/12;
 }
 
 #signUp {
@@ -141,21 +136,15 @@ input[type=tel] {
     background-color: black;
     color: white;
 }
-#allTheSignIn {
-  z-index:2;
-  widows: 100%;
-  position: absolute;
-}
 
 #signUp:hover {
     color: #2A80E5;
 }
 
 section {
-    margin-left:24vw;
-    z-index: 3;
+    grid-column: 4/10;
+    z-index: 2;
     margin-top: 10px;
-    width:60%
 }
 
 #preferredTime {
@@ -180,18 +169,14 @@ span {
     padding: 0 40px 0 5px;
 }
 
-button.calendars {
+.calendars {
     font-size: 21px;
     color: white;
     background-color: #4A90E2;
     border: none;
     padding: 8px 8px 8px 8px;
-    width:52%;
-    margin-left:24vw;
 }
-button#googleCalendar{
-    margin-left:0;
-}
+
 #siteSearch {
     text-align: left;
     color: black;
@@ -225,7 +210,7 @@ label img {
 .arrivalTime,
 .minuteBefore {
     font-size: 21px;
-    z-index: 3;
+    z-index: 2;
     margin: 10px 0 5px 0;
     color: black;
 }
@@ -287,7 +272,7 @@ input[type=text].minuteBefore {
 
 button.signIn {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     color: #2A80E5;
     width: 7em;
     margin: 1vw 1vw 0 15vw;
@@ -382,6 +367,9 @@ button.signIn {
         margin-top: 20vw;
     }
     input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=tel],
     section {
         grid-column: 2/12;
         font-size: 18px;
