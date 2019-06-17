@@ -8,6 +8,17 @@
     src: url("font/SuisseIntl-Regular.otf");
 }
 
+#logo{
+    z-index:2;
+    position: fixed;
+    top:1em;
+    left:2vw;
+    width:5em;
+}
+
+
+
+
 h1,
 h2,
 h3,
@@ -15,14 +26,14 @@ h4,
 .arrivalTime,
 .minuteBefore,
 button,
-h5 {
+h5,
+.signIn {
     font-family: SuisseIntl-SemiBold;
 }
 
 p,
 label,
-span,
-.signIn {
+span {
     font-family: SuisseIntl-Regular;
 }
 
@@ -40,7 +51,7 @@ h2 {
     text-align: center;
     grid-column: 1/13;
     z-index: 2;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 h3 {
@@ -68,7 +79,7 @@ p {
     font-size: 16px;
 }
 
-#allTheSignUp, #allTheSignIn {
+#allTheSignUp, #allTheSignIn,#allTheInnerPage {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -126,9 +137,21 @@ input[type=tel] {
     margin: 20px 0 20px 0;
 }
 
+@-webkit-keyframes autofill {
+    to {
+        color: #2A80E5;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 .signUp {
     z-index: 2;
-    grid-column: 5/12;
+    grid-column: 3/12;
 }
 
 #signUp {
