@@ -11,26 +11,51 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
+var uid;
 
 //sign up on click
-$("#googleCalendar").on("click", function() {
+$("#signUp").on("click", function() {
     var email = $("#email").val();
     var password = $("#password").val();
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        //insert any error alerts here later!
+    firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
+        uid = user.user.uid;
+        database.ref().push({
+            uid: user.user.uid,
+            name: $("#name").val(),
+            number: $("#number").val(),
+            email: $("#email").val(),
+            password: $("#password").val()
+                //insert google calender stuff to save
+        });
+    }).then(function() {
+        redirect();
+    }).catch(function(error) {
+        alert("Failed to sign up...");
     });
-
 });
 
 $("#signIn").on("click", function() {
     var email = $("#email").val();
     var password = $("#password").val();
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+        redirect();
+    }).catch(function(error) {
+        alert("Failed to sign in. Please check credentials or sign up!");
     });
+
+    function redirect(user) {
+        $("body").html(`
+        <h2 class="innerPage">Your Events</h2>
+        <label><img src="../search.png"></label>
+        <input type="search" id="siteSearch" placeholder="Search event by name or date">
+        <div id="container-for-content">
+        
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+        <script src="../scripts/inner.js"></script>
+        `);
+    }
 });
