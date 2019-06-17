@@ -77,7 +77,7 @@ p {
     font-size: 16px;
 }
 
-#allTheSignUp, #allTheSignIn,#allTheInnerPage {
+#allTheSignUp, #allTheSignIn,#allTheInnerPage, #allTheIndex {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
