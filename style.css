@@ -1,0 +1,406 @@
+@font-face {
+    font-family: SuisseIntl-SemiBold;
+    src: url("font/SuisseIntl-SemiBold.otf");
+    }
+@font-face {
+    font-family: SuisseIntl-Regular;
+    src: url("font/SuisseIntl-Regular.otf");
+    }
+
+    h1, h2, h3, h4, .arrivalTime,.minuteBefore,button,h5 {
+        font-family: SuisseIntl-SemiBold;
+    }
+    p,label,span, .signIn{
+        font-family: SuisseIntl-Regular;
+    }
+    h1{
+        font-size: 60px;
+        margin-top: 100px;
+        text-align: center;
+        grid-column: 1/13;
+        z-index: 2;
+        color: #4A90E2;
+    }
+    h2{
+        font-size:36px;
+        text-align: center;
+        grid-column: 1/13;
+        z-index: 2;
+        margin-top:50px;
+    }
+    h3{
+        font-size:21px;
+        color:black;
+        z-index: 2;
+    }
+  
+    h4{
+        font-size:21px;
+        z-index: 2;
+        margin:10px 0 5px 0;
+    }
+    label{
+        font-size:21px;
+    }
+    h5{
+        font-size: 16px;
+        z-index: 2;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        
+    }
+
+    .columnForIntros{
+        grid-column: 4/10;
+    }
+    .intro{
+        top:396px;
+    }
+    .background{
+        top:0;
+        left:0;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width:100%;
+        background-color: #E5616F; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom,#FBD384,#E5616F);
+      
+    }
+    button{
+        background-color: #2A80E5;
+        border:none;
+        color:white;
+        z-index: 2;
+        font-size: 26px;
+        grid-column: 5/9;
+        padding:5px 15px 5px 15px;
+        margin:50px 0 50px 0;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color:black;
+        color:white;
+        border:none;
+    }
+    input[type=text]{
+        z-index:2;
+        border:solid;
+        border-width:2px;
+        color:#2A80E5;
+        background-color:transparent;
+        font-size: 21px;
+        grid-column: 4/10;
+        padding:8px 8px 8px 8px;
+        margin:20px 0 20px 0;
+        
+    }
+   .signIn{
+       position:absolute;
+       z-index: 2;
+       color:#2A80E5;
+       width:4em;
+       margin:1vw 1vw 0 15vw;
+       right:3%;
+       border:solid;
+       border-width: 1px;
+       padding:5px 5px 5px 5px
+
+   } 
+   .signUp{
+       z-index: 2;
+       grid-column: 5/12;
+   }
+  #signUp{
+    margin:20px 0 20px 0;
+    background-color: black;
+    color:white;
+  }
+  #signUp:hover{
+      color:#2A80E5;
+  }
+    section{
+        grid-column: 4/10;
+        z-index: 2;
+        margin-top:10px;
+    }
+    #preferredTime{
+        margin: 10px 10px 10px 0 ;
+    }
+    .pretty .state label:before {
+        border-color:#2A80E5;
+    }
+    .pretty.p-default input:checked~.state label:after{
+        background-color:#2A80E5!important;
+    }
+    .pretty{
+        z-index:100;
+    }
+    span{
+        font-size:11px;
+        opacity:.5;
+        padding: 0 40px 0 5px;
+    }
+    .calendars{
+        font-size:21px;
+        color:white;
+        background-color: #4A90E2;
+        border:none;
+        padding:8px 8px 8px 8px;
+        
+    }
+    #siteSearch {
+        text-align: left;
+        color: black;
+        grid-column: 2/5;
+        font-size:11px;
+        border:solid;
+        border-image:linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
+        border-image-slice: 0 30% 30;
+        padding: 0 0 0 10px;
+    }
+    label img{
+        margin-left: 6vw;
+    }
+    #container-for-content{
+        margin-top:80px;
+        grid-column: 2/12;
+    }
+    .bullet{
+        height: 20px;
+        width: 20px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        background-image: linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
+       margin:0 20px 0px 0;
+       
+    }
+.arrivalTime, .minuteBefore{
+    font-size:21px;
+    z-index: 2;
+    margin:10px 0 5px 0;
+    color:black;
+}
+.arrivalTime{
+    color:#4A90E2;
+}
+.date{
+    margin-left: -20px;
+}
+.event{
+    margin: 15px 0 15px 20px;
+    width:100%;
+    display: inline-block;
+    border:solid;
+    border-image:linear-gradient(-90deg, #FBD384 0%, #E5616F 100%);
+    border-image-slice: 0 0% 25;
+}
+.eventTitle{
+    width:20vw;
+    display: inline-block;
+}
+.address{
+    width:15vw;
+    opacity:.5;
+    display: inline-block;
+    margin: 5px 20px 0 -20px;
+    font-size:11px;
+}
+.arrivalTimeClass{
+    width:20vw;
+    display: inline-block;
+}
+.minutesBeforeClass{
+    width:20vw;
+    display: inline-block;
+}
+input[type=text].minuteBefore{
+    width:15px;
+    height:20px;
+    padding: 5px 15px 5px 15px;
+    margin: 0 5px 0 5px;
+    border:none;
+    color:black;
+    background: linear-gradient(-90deg, #FBD384 0%, #E5616F 100%);
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:white;
+}
+
+::placeholder{
+    color:black;
+    opacity:.5;
+}
+@media only screen and (max-width: 865px) {
+    h1{
+        margin: 20vw 0 15vw 0;
+    }
+    .columnForIntros{
+        grid-column: 3/11;
+        
+    }
+    button{
+        margin-top:20vw;
+    }
+    .calendars{
+        margin:40px 0 40px 0;
+    }
+    .innerPage{
+        grid-column: 2/6;
+        text-align: left
+    }
+    label img{
+        margin-top: 9vw;
+        margin-left:5vw;
+    }
+    #siteSearch {
+        grid-column: 7/12;
+        height: 20px;
+        margin-top: 9vw;
+    }
+    #container-for-content{
+        margin-top:60px;
+       
+    }
+    .event{
+        display: block;
+ 
+    }
+    .eventTitle{
+        display:block;
+        width: 45vw;
+    }
+    .address{
+        display: block;
+        margin-left: 0;
+        width: 45vw;
+    }
+    .arrivalTimeClass{
+        display:block;
+        width: 45vw;
+    }
+    .minutesBeforeClass{
+        display: block;
+        width: 45vw;
+    }
+
+}
+@media only screen and (max-width: 670px) {
+    h1{
+        font-size: 40px;
+        margin: 30vw 0 20vw 0;
+
+    }
+    h2{
+        font-size:28px;
+    }
+    h3{
+        font-size: 16px;
+        font-family: SuisseIntl-Regular;
+    }
+
+    h4{
+        font-size:16px;
+    }
+    label{
+        font-size:16px;
+    }
+    h5{
+        color:#F4B27E;
+    }
+
+    p{
+        font-size: 16px;
+    }
+    
+    .columnForIntros{
+        grid-column: 2/12;
+        line-height: 25px;
+    }
+    button{
+        grid-column: 2/12;
+        font-size:21px;
+        margin-top:20vw;
+    }
+    input[type=text],section{
+        grid-column: 2/12;
+        font-size:18px;
+    }
+    #preferredTime{
+        width:15vw;
+        text-align: center;
+        margin-left: 15vw;
+    }
+    .pretty{
+        margin: 3vw 10vw 5vw 14vw;
+    }
+    .calendars{
+        font-size:16px;
+        width:100%;
+        margin:20px 0 20px 0;
+    }
+
+    .innerPage{
+        grid-column: 2/13;
+        text-align: left
+    }
+    label img{
+        margin-top: 4vw;
+        margin-left:7vw;
+    }
+    #siteSearch {
+        grid-column: 2/11;
+        height: 20px;
+        margin-top: 4vw;
+    }
+    #container-for-content{
+        margin-top:20px;
+       grid-column: 1/13;
+    }
+    .event{
+        display: block;
+        width: 90%;
+    }
+    .eventTitle{
+        display:block;
+        width: 100%;
+    }
+    .address{
+        display: block;
+        margin-left: 0;
+        width: 100%;
+    }
+    .arrivalTimeClass{
+        display:block;
+        width: 100%;
+    }
+    .minutesBeforeClass{
+        display: block;
+        width: 100%;
+    }
+    .date{
+        margin-left: 6vw;
+    }
+    .bullet{
+        height: 15px;
+        width: 15px;
+       
+    }
+    .arrivalTime{
+        font-size:18px;
+    }
+ 
+}
+
