@@ -9,14 +9,12 @@
 }
 
 #logo{
-    z-index:2;
-    position: fixed;
-    top:1em;
-    left:2vw;
+    z-index:4;
+    position: absolute;
+    top:5px;
+    left:5px;
     width:5em;
 }
-
-
 
 
 h1,
@@ -115,6 +113,18 @@ button {
     margin: 50px 0 50px 0;
     cursor: pointer;
 }
+button.signIn {
+    position: absolute;
+    z-index: 3;
+    color: #2A80E5;
+    width: 7em;
+    top:3px;
+    right: 5px;
+    border: none;
+    font-size: 11px;
+    background: none;
+    margin: 0px 0 0px 0;
+}
 
 button:hover {
     background-color: black;
@@ -151,7 +161,7 @@ input:-webkit-autofill {
 
 .signUp {
     z-index: 2;
-    grid-column: 3/12;
+    grid-column: 4/12;
 }
 
 #signUp {
@@ -203,20 +213,26 @@ span {
 #siteSearch {
     text-align: left;
     color: black;
-    grid-column: 2/5;
+    border:white;
+    grid-column: 7/12;
     font-size: 11px;
-    border: solid;
-    border-image: linear-gradient(180deg, #FBD384 0%, #E5616F 100%);
-    border-image-slice: 1 1 1 1;
     padding: 0 0 0 10px;
+    height: 20px;
+    margin-top: 11em;
+    z-index: 3;
 }
 
 label img {
-    margin-left: 6vw;
+    margin-top: 5.2em;
+    margin-left: 5vw;
+}
+.innerPage {
+    grid-column: 2/6;
+    text-align: left;
 }
 
 #container-for-content {
-    margin-top: 80px;
+    margin-top: 10px;
     grid-column: 2/12;
 }
 
@@ -274,7 +290,7 @@ label img {
 }
 
 .minutesBeforeClass {
-    width: 20vw;
+    width: 25vw;
     display: inline-block;
 }
 
@@ -293,18 +309,19 @@ input[type=text].minuteBefore {
     opacity: .5;
 }
 
-button.signIn {
-    position: absolute;
-    z-index: 2;
-    color: #2A80E5;
-    width: 7em;
-    margin: 1vw 1vw 0 15vw;
-    right: 3%;
-    border: none;
-    font-size: 11px;
-    background: none;
-}
 
+.topBar{
+    background-color: #E5616F;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom, #FBD384, #E5616F);
+    position:absolute;
+    top:0;
+    left:0;
+    height:12em;
+    width:100%;
+    z-index:1;
+}
+/* ----------------------------------------------------------- */
 @media only screen and (max-width: 865px) {
     h1 {
         margin: 20vw 0 15vw 0;
@@ -315,25 +332,15 @@ button.signIn {
     button {
         margin-top: 20vw;
     }
+    button.signIn {
+        margin-top:0;
+    }
     .calendars {
         margin: 40px 0 40px 0;
     }
-    .innerPage {
-        grid-column: 2/6;
-        text-align: left
-    }
-    label img {
-        margin-top: 9vw;
-        margin-left: 5vw;
-    }
-    #siteSearch {
-        grid-column: 7/12;
-        height: 20px;
-        margin-top: 9vw;
-    }
-    #container-for-content {
-        margin-top: 60px;
-    }
+
+  
+ 
     .event {
         display: block;
     }
@@ -389,6 +396,10 @@ button.signIn {
         font-size: 21px;
         margin-top: 20vw;
     }
+    button.signIn {
+        margin-top:0;
+    }
+
     input[type=text],
     input[type=email],
     input[type=password],
@@ -410,18 +421,22 @@ button.signIn {
         width: 100%;
         margin: 20px 0 20px 0;
     }
-    .innerPage {
-        grid-column: 2/13;
-        text-align: left
-    }
+    
     label img {
         margin-top: 4vw;
         margin-left: 7vw;
     }
+    .innerPage {
+        text-align: left;
+        margin-top:50px;
+        margin-left:20px;
+        grid-column: 1/10;
+    }
     #siteSearch {
-        grid-column: 2/11;
-        height: 20px;
-        margin-top: 4vw;
+        grid-column: 1/11;
+        height: 30px;
+        margin-left:20px;
+        margin-top: -1em;
     }
     #container-for-content {
         margin-top: 20px;
@@ -430,6 +445,7 @@ button.signIn {
     .event {
         display: block;
         width: 90%;
+        left:5vw;
     }
     .eventTitle {
         display: block;
@@ -450,6 +466,7 @@ button.signIn {
     }
     .date {
         margin-left: 6vw;
+        margin-bottom: 0;
     }
     .bullet {
         height: 15px;
@@ -457,5 +474,8 @@ button.signIn {
     }
     .arrivalTime {
         font-size: 18px;
+    }
+    .topBar{
+        height:10em;
     }
 }
