@@ -38,7 +38,7 @@ h1 {
 h2 {
     font-size: 36px;
     text-align: center;
-    grid-column: 1/13;
+    width:100%;
     z-index: 2;
     margin-top: 50px;
 }
@@ -54,14 +54,17 @@ h4 {
     z-index: 2;
     margin: 10px 0 5px 0;
 }
-
+#allTheSignUp{
+    position:absolute;
+    z-index:3;
+}
 label {
     font-size: 21px;
 }
 
 h5 {
     font-size: 16px;
-    z-index: 2;
+    z-index: 3;
 }
 
 p {
@@ -97,7 +100,7 @@ button {
     background-color: #2A80E5;
     border: none;
     color: white;
-    z-index: 2;
+    z-index: 3;
     font-size: 26px;
     grid-column: 5/9;
     padding: 5px 15px 5px 15px;
@@ -115,19 +118,19 @@ input[type=text],
 input[type=email],
 input[type=password],
 input[type=tel] {
-    z-index: 2;
+    z-index: 3;
     border: solid;
     border-width: 2px;
     color: #2A80E5;
     background-color: transparent;
     font-size: 21px;
-    grid-column: 4/10;
+    width:50%;
     padding: 8px 8px 8px 8px;
-    margin: 20px 0 20px 0;
+    margin: 20px 4vw 20px 4vw;
 }
 
 .signUp {
-    z-index: 2;
+    z-index: 3;
     grid-column: 5/12;
 }
 
@@ -142,8 +145,8 @@ input[type=tel] {
 }
 
 section {
-    grid-column: 4/10;
-    z-index: 2;
+    margin-left:4vw;
+    z-index: 3;
     margin-top: 10px;
 }
 
@@ -210,7 +213,7 @@ label img {
 .arrivalTime,
 .minuteBefore {
     font-size: 21px;
-    z-index: 2;
+    z-index: 3;
     margin: 10px 0 5px 0;
     color: black;
 }
@@ -272,7 +275,7 @@ input[type=text].minuteBefore {
 
 button.signIn {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     color: #2A80E5;
     width: 7em;
     margin: 1vw 1vw 0 15vw;
