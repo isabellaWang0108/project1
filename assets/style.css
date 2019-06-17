@@ -186,10 +186,12 @@ button.calendars {
     background-color: #4A90E2;
     border: none;
     padding: 8px 8px 8px 8px;
-    width:60%;
-    margin-left:20%;
+    width:52%;
+    margin-left:24vw;
 }
-
+button#googleCalendar{
+    margin-left:0;
+}
 #siteSearch {
     text-align: left;
     color: black;
