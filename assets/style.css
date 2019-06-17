@@ -54,6 +54,8 @@ h4 {
     z-index: 2;
     margin: 10px 0 5px 0;
 }
+
+
 #allTheSignUp{
     position:absolute;
     z-index:3;
@@ -126,12 +128,12 @@ input[type=tel] {
     font-size: 21px;
     width:50%;
     padding: 8px 8px 8px 8px;
-    margin: 20px 4vw 20px 4vw;
+    margin: 20px 4vw 20px 24vw;
 }
 
 .signUp {
     z-index: 3;
-    grid-column: 5/12;
+    margin-left:30%;
 }
 
 #signUp {
@@ -139,15 +141,21 @@ input[type=tel] {
     background-color: black;
     color: white;
 }
+#allTheSignIn {
+  z-index:2;
+  widows: 100%;
+  position: absolute;
+}
 
 #signUp:hover {
     color: #2A80E5;
 }
 
 section {
-    margin-left:4vw;
+    margin-left:24vw;
     z-index: 3;
     margin-top: 10px;
+    width:60%
 }
 
 #preferredTime {
@@ -172,12 +180,14 @@ span {
     padding: 0 40px 0 5px;
 }
 
-.calendars {
+button.calendars {
     font-size: 21px;
     color: white;
     background-color: #4A90E2;
     border: none;
     padding: 8px 8px 8px 8px;
+    width:60%;
+    margin-left:20%;
 }
 
 #siteSearch {
