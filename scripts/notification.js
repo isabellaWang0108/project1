@@ -7,8 +7,8 @@ const nexmo = new Nexmo({
 
 
 const from = '13852403539'
-const to = '19083916750'
-const text = 'Hello, this is Dear Time. Thanks for subscribing us. We help you to get your place on time '
+const to = phoneNumber
+const text = 'Hello, this is Dear Time. Thanks for subscribing us. We will help you to get to your place on time '
 
 nexmo.message.sendSms(from, to, text, (err, responseData) => {
     if (err) {
