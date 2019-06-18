@@ -12,20 +12,23 @@
 </head>
 
 <body>
-    <div class="background"></div>
 
-    <h2 class="animated slideInUp fast">Welcome Back : )</h2>
+    <img src="../assets/images/logo.png" id="logo">
+    <div id="allTheSignIn">
+        <div class="background"></div>
+        <h2 class="animated slideInUp fast">Welcome Back : )</h2>
 
-    <input type="email" class="animated fadeIn slow" id="email" placeholder="Your Email">
-    <input type="password" class="animated fadeIn slow" id="password" placeholder="password">
-    <p class="signUp">Don't have account? <a href="signUp.html"> Sign up</a></p>
+        <input type="email" class="animated fadeIn slow" id="email" placeholder="Your Email">
+        <input type="password" class="animated fadeIn slow" id="password" placeholder="password">
+        <p class="signUp">Don't have account? <a href="signUp.html"> Sign up</a></p>
 
-    <!-- This is where you sync the Google Doc -->
-    <button class="calendars" id="signIn">sign in</button>
-    <!-- After users sync the calendar, button Ready to go shows up -->
-    <!-- <button id="signUp">Ready to Go!</button> -->
+        <!-- This is where you sync the Google Doc -->
+        <button class="calendars" id="signIn">sign in</button>
+        <!-- After users sync the calendar, button Ready to go shows up -->
+        <!-- <button id="signUp">Ready to Go!</button> -->
 
-    </section>
+        </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
