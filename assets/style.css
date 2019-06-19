@@ -66,6 +66,10 @@ h4 {
     z-index: 2;
     margin: 10px 0 5px 0;
 }
+.center{
+    text-align: center;
+    margin-top:2em;
+}
 
 label {
     font-size: 21px;
@@ -166,7 +170,7 @@ input[type=tel] {
     font-size: 21px;
     grid-column: 4/10;
     padding: 8px 8px 8px 8px;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 10px 0;
 }
 
 @-webkit-keyframes autofill {
@@ -187,6 +191,7 @@ input:-webkit-autofill {
 }
 
 #signUp {
+    width:100%;
     margin: 20px 0 20px 0;
     background-color: black;
     color: white;
@@ -199,7 +204,7 @@ input:-webkit-autofill {
 section {
     grid-column: 4/10;
     z-index: 2;
-    margin-top: 10px;
+    margin-top: 0em;
 }
 
 #preferredTime {
@@ -224,12 +229,13 @@ span {
     padding: 0 40px 0 5px;
 }
 
-.calendars {
+button.calendars {
     font-size: 21px;
     color: white;
     background-color: #4A90E2;
     border: none;
     padding: 8px 8px 8px 8px;
+    margin: 10px 0 0px 0;
 }
 
 #siteSearch {

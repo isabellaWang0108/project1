@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id" content="904494310957-snk9h5ndi37tl0h4emhho96llkpm10v7.apps.googleusercontent.com">
     <title>Dear Time</title>
     <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet"> </link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
@@ -17,43 +18,21 @@
         <button class="signIn" onclick="location.href='pages/signIn.html'">Sign in</button>
         <img src="../assets/images/logo.png" id="logo"> 
 
-        <h2 class="animated slideInUp fast">Tell us about you</h2>
+      
+            <h2 class="animated slideInUp fast">Sign up with</h2>
 
-
-        <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
-        <input type="tel" class="animated fadeIn slow" id="number" placeholder="Your Phone Number 0000000000">
-        <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
-        <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
-
-        <section class="animated fadeIn slow">
-            <h4>Usually how long do you prefer to arrive before your events?</h4>
-            <input type="text" id="preferredTime" placeholder="15"><label>minutes</label>
-
-            <h4>How do you prefer us to notify you?</h4>
-
-            <!-- checkbox for text, which is mendatory -->
-
-            <div class="pretty p-default p-fill">
-                <input type="checkbox" id="textChecked" checked/>
-                <div class="state p-sucess">
-                    <label>Notification</label><span> (Required)</span>
-                </div>
-            </div>
-
-
-            <!-- checkbox for call -->
-            <div class="pretty p-default p-fill">
-                <input type="checkbox" id="callChecked" />
-                <div class="state p-sucess">
-                    <label>Call<span> (Charged)</span></label>
-                </div>
-            </div>
-            <br>
-
-            <!-- This is where you sync the Google Doc -->
+            <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
+            <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
             <button class="calendars" id="googleCalendar">link your Google Calendar</button>
+            <section>
+            <!-- This is where you sync the Google Doc -->
+           
+
+            <h4 class="center">Or</h4>
+           
+            <button class="calendars" id="authorize_button" style="display: none;">Google Signup</button>
             <!-- After users sync the calendar, button Ready to go shows up -->
-            <button id="signUp">Ready to Go!</button>
+            
 
         </section>
 
@@ -65,11 +44,14 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="../scripts/notification.js"></script>
-    <script src="../scripts/account.js"></script>
-    <script src="../scripts/calendar.js"></script>
-
-    <script src="../scripts/notification.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <!-- <script src="../scripts/notification.js"></script> -->
+    <!-- <script src="../scripts/account.js"></script> -->
+    <!-- <script src="../scripts/calendar.js"></script> -->
+    <script src="../scripts/googleSignIn.js"></script>
+    <!-- <script src="../scripts/notification.js"></script> -->
 
 </body>
 
