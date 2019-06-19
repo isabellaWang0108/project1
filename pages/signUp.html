@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="questions">
+  <div id="allTheSignUp">
 
         <h2 class="animated slideInUp fast">Tell us about you</h2>
 
@@ -47,40 +47,18 @@
             <br>
             
             <!-- After users sync the calendar, button Ready to go shows up -->
-            <button id="next">Next</button>
-
+            <div id="authorize_button" style="display: none;"></div>
+            <button id="signout_button" style="display: none;">Sign Out</button>
+ 
+ 
+            <pre id="content" style="white-space: pre-wrap;"></pre>
+ 
         </section>
         <div class="background"></div>
-  </div>
 
 
-  <div id="allTheSignUp">  
-        <button class="signIn" onclick="location.href='pages/signIn.html'">Sign in</button>
-        <img src="../assets/images/logo.png" id="logo"> 
-
-      
-            <h2 class="animated slideInUp fast">Sign up with</h2>
-
-            <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
-            <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
-            <p class="errorMessage"></p>
-            <button class="calendars" id="googleCalendar">link your Google Calendar</button>
-            <section>
-            <!-- This is where you sync the Google Doc -->       
-
-            <h4 class="center">Or</h4>
-           
 
 
-           <div id="authorize_button" style="display: none;">Authorize</div>
-           <button id="signout_button" style="display: none;">Sign Out</button>
-
-
-           <pre id="content" style="white-space: pre-wrap;"></pre>
-            <!-- After users sync the calendar, button Ready to go shows up -->
-            
-             </section>
-             <div class="background"></div>
     </div>
     <script type="text/javascript" src="../scripts/googleSignIn.js">
  
