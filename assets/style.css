@@ -8,6 +8,7 @@
     src: url("font/SuisseIntl-Regular.otf");
 }
 
+
 #logo{
     z-index:4;
     position: absolute;
@@ -25,6 +26,7 @@ h4,
 .minuteBefore,
 button,
 h5,
+
 th,
 .signIn {
     font-family: SuisseIntl-SemiBold;
@@ -78,7 +80,10 @@ p {
     font-size: 16px;
 }
 
-#allTheSignUp, #allTheSignIn,#allTheInnerPage, #allTheIndex {
+#allTheSignUp,
+#allTheSignIn,
+#allTheInnerPage,
+#allTheIndex {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -123,6 +128,19 @@ button.signIn {
     color: #2A80E5;
     width: 7em;
     top:3px;
+    right: 5px;
+    border: none;
+    font-size: 14px;
+    background: none;
+    margin: 0px 0 0px 0;
+}
+
+button.signIn {
+    position: absolute;
+    z-index: 3;
+    color: #2A80E5;
+    width: 7em;
+    top: 3px;
     right: 5px;
     border: none;
     font-size: 14px;
@@ -230,6 +248,7 @@ label img {
     margin-top: 5.2em;
     margin-left: 5vw;
 }
+
 .innerPage {
     grid-column: 2/6;
     text-align: left;
@@ -325,7 +344,7 @@ input[type=text].minuteBefore {
     width:100%;
     z-index:1;
 }
-/* ----------------------------------------------------------- */
+
 @media only screen and (max-width: 865px) {
     h1 {
         margin: 20vw 0 15vw 0;
@@ -337,14 +356,14 @@ input[type=text].minuteBefore {
         margin-top: 20vw;
     }
     button.signIn {
+
         margin-top:0;
+
     }
     .calendars {
         margin: 40px 0 40px 0;
     }
 
-  
- 
     .event {
         display: block;
     }
@@ -368,8 +387,9 @@ input[type=text].minuteBefore {
 }
 
 @media only screen and (max-width: 670px) {
-    #logo{
-        width:7em;
+
+    #logo {
+        width: 7em;
     }
 
     h1 {
@@ -406,6 +426,7 @@ input[type=text].minuteBefore {
         margin-top: 20vw;
     }
     button.signIn {
+
         margin-top:0;
     }
 
@@ -430,13 +451,14 @@ input[type=text].minuteBefore {
         width: 100%;
         margin: 20px 0 20px 0;
     }
-    
+
     label img {
         margin-top: 4vw;
         margin-left: 7vw;
     }
     .innerPage {
         text-align: left;
+
         margin-top:50px;
         margin-left:20px;
         grid-column: 1/10;
@@ -444,7 +466,9 @@ input[type=text].minuteBefore {
     #siteSearch {
         grid-column: 1/11;
         height: 30px;
+
         margin-left:20px;
+
         margin-top: -1em;
     }
     #container-for-content {
@@ -484,7 +508,9 @@ input[type=text].minuteBefore {
     .arrivalTime {
         font-size: 18px;
     }
+
     .topBar{
         height:10em;
+
     }
 }

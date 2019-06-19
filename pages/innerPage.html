@@ -12,69 +12,90 @@
 
 <body>
     <div id="allTheInnerPage">
-    
+
         <div class="topBar"></div>
-         <h2 class="innerPage">Your Events</h2>
-         <button class="signIn">Sign out</button>
-    <!-- search function is here -->
-            <label><img src="../assets/images/search.png"></label>
-            <input type="search" id="siteSearch" placeholder="Search event by name or date">
+        <h2 class="innerPage">Your Events</h2>
+        <button class="signIn" id="signOut">Sign out</button>
+        <!-- search function is here -->
+        <label><img src="../assets/images/search.png"></label>
+        <input type="search" id="siteSearch" placeholder="Search event by name or date">
+
+        <!-- Please read the following lines!!! -->
+        <!-- Please read the following lines!!! -->
+        <!-- Please read the following lines!!! -->
+        <!-- Please read the following lines!!! -->
+        <!-- this is sample look  -->
+        <!-- Please append elements into corresponding id and class names!! -->
 
 
 
 
+        <!-- This is the unit for all the dynamic information from Calendar -->
+        <div id="container-for-content">
 
-            <div id="container-for-content">
- 
-                 <table class="eventsInDate">
-                      <tr><h5 class="date">
-                            <div class="bullet"></div>
-                            May 00 2019
-                      </h5></tr>
-                      <tr>
-                        <td class="event">
-                            <h4 class="eventTitle">Event Title</h4>
-                            <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
-                            <p class="arrivalTimeClass">arrival time:
-                                <bold class="arrivalTime">3pm</bold>
-                            </p>
-                            <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
-                        
-                        </td>
-                      </tr>
-                 </table>
+            <table class="eventsInDate">
+                <tr>
+                    <h5 class="date">
+                        <div class="bullet"></div>
+                        May 00 2019
+                    </h5>
+                </tr>
+                <tr>
+                    <td class="event">
+                        <h4 class="eventTitle">Park</h4>
+                        <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
+                        <p class="arrivalTimeClass">arrival time:
+                            <bold class="arrivalTime">3pm</bold>
+                        </p>
+                        <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
 
-                 <table class="eventsInDate">
-                        <tr><h5 class="date">
-                              <div class="bullet"></div>
-                              May 00 2019
-                        </h5></tr>
-                        <tr>
-                          <td class="event">
-                              <h4 class="eventTitle">Event Title</h4>
-                              <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
-                              <p class="arrivalTimeClass">arrival time:
-                                  <bold class="arrivalTime">3pm</bold>
-                              </p>
-                              <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
-                          </td>
-                        </tr>
-                        <tr>
-                                <td class="event">
-                                    <h4 class="eventTitle">Event Title</h4>
-                                    <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
-                                    <p class="arrivalTimeClass">arrival time:
-                                        <bold class="arrivalTime">3pm</bold>
-                                    </p>
-                                    <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
-                                </td>
-                        </tr>                      
+                    </td>
+                </tr>
+            </table>
+
+            <table class="eventsInDate">
+                <tr>
+                    <h5 class="date">
+                        <div class="bullet"></div>
+                        May 00 2019
+                    </h5>
+                </tr>
+                <tr>
+                    <td class="event">
+                        <h4 class="eventTitle">Disney</h4>
+                        <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
+                        <p class="arrivalTimeClass">arrival time:
+                            <bold class="arrivalTime">5pm</bold>
+                        </p>
+                        <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="event">
+                        <h4 class="eventTitle">paRk</h4>
+                        <p class="address"> 000 east 00 street, NY, dnjsnkjdnskmccsc </p>
+                        <p class="arrivalTimeClass">arrival time:
+                            <bold class="arrivalTime">6pm</bold>
+                        </p>
+                        <p class="minutesBeforeClass">arrive<input type="text" class="minuteBefore" value="5">mins ahead</p>
+                    </td>
+                </tr>
+
+            </table>
 
                    </table>
 
                 </div>       
 
-           
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="../scripts/account.js"></script>
+    <script src="../scripts/inner.js"></script>
+    <!-- <script src="../scripts/notification.js"></script> -->
 
 </body>
 

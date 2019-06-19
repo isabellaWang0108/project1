@@ -12,52 +12,54 @@
 </head>
 
 <body>
-        
+  
   <div id="allTheSignUp">  
         <button class="signIn" onclick="location.href='pages/signIn.html'">Sign in</button>
         <img src="../assets/images/logo.png" id="logo"> 
 
-    <h2 class="animated slideInUp fast">Tell us about you</h2>
+        <h2 class="animated slideInUp fast">Tell us about you</h2>
 
-    <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
-    <input type="tel" class="animated fadeIn slow" id="number" placeholder="Phone Number ex. 10000000000">
-    <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
-    <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
 
-    <section class="animated fadeIn slow">
-        <h4>Usually how long do you prefer to arrive before your events?</h4>
-        <input type="text" id="preferredTime" placeholder="15"><label>minutes</label>
+        <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
+        <input type="tel" class="animated fadeIn slow" id="number" placeholder="Your Phone Number 0000000000">
+        <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
+        <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
 
-        <h4>How do you prefer us to notify you?</h4>
+        <section class="animated fadeIn slow">
+            <h4>Usually how long do you prefer to arrive before your events?</h4>
+            <input type="text" id="preferredTime" placeholder="15"><label>minutes</label>
 
-        <!-- checkbox for text, which is mendatory -->
+            <h4>How do you prefer us to notify you?</h4>
 
-        <div class="pretty p-default p-fill">
-            <input type="checkbox" id="textChecked" checked/>
-            <div class="state p-sucess">
-                <label>Text</label><span> (Required)</span>
+            <!-- checkbox for text, which is mendatory -->
+
+            <div class="pretty p-default p-fill">
+                <input type="checkbox" id="textChecked" checked/>
+                <div class="state p-sucess">
+                    <label>Notification</label><span> (Required)</span>
+                </div>
             </div>
-        </div>
 
-        <!-- checkbox for call -->
-        <div class="pretty p-default p-fill">
-            <input type="checkbox" id="callChecked" />
-            <div class="state p-sucess">
-                <label>Call<span> (Charged)</span></label>
+
+            <!-- checkbox for call -->
+            <div class="pretty p-default p-fill">
+                <input type="checkbox" id="callChecked" />
+                <div class="state p-sucess">
+                    <label>Call<span> (Charged)</span></label>
+                </div>
             </div>
-        </div>
-        <br>
-        
-        <!-- This is where you sync the Google Doc -->
-        <button class="calendars" id="googleCalendar">link your Google Calendar</button>
-        <p class="errorMessage"></p>
-        <!-- After users sync the calendar, button Ready to go shows up -->
-        <button id="signUp">Ready to Go!</button>
+            <br>
 
-    </section>
-    
-   </div>
-   <div class="background"></div>
+            <!-- This is where you sync the Google Doc -->
+            <button class="calendars" id="googleCalendar">link your Google Calendar</button>
+            <!-- After users sync the calendar, button Ready to go shows up -->
+            <button id="signUp">Ready to Go!</button>
+
+        </section>
+
+    </div>
+    <div class="background"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
@@ -67,6 +69,7 @@
     <script src="../scripts/account.js"></script>
     <script src="../scripts/calendar.js"></script>
 
+    <script src="../scripts/notification.js"></script>
 
 </body>
 
