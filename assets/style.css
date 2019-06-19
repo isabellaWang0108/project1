@@ -87,11 +87,18 @@ p {
 #allTheSignUp,
 #allTheSignIn,
 #allTheInnerPage,
-#allTheIndex {
+#allTheIndex,
+#questions {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    position:absolute;
 }
-
+#questions{
+    z-index:3;
+}
+#allTheSignUp{
+    z-index:2;
+}
 .columnForIntros {
     grid-column: 4/10;
 }
@@ -125,6 +132,10 @@ button {
     padding: 5px 15px 5px 15px;
     margin: 50px 0 50px 0;
     cursor: pointer;
+}
+button#next{
+    margin: 20px 0 50px 0;
+    width:100%;
 }
 button.signIn {
     position: absolute;

@@ -14,23 +14,27 @@ var database = firebase.database();
 var uid;
 var user;
 
-
+$("#next").on("click",function(){
+    $("#allTheSignUp").css("z-index","5");
+})
 // phone number formatting
 
 $(document).ready(function(){
     $("#number").inputmask({"mask": "(999) 999-9999"}); 
   });
 
-// calendar sign up on click
-
+//sign up on click
 $("#googleCalendar").on("click", function() {
     var email = $("#email").val();
     var password = $("#password").val();
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        alert("Failed to sign in. Please check credentials or sign up!");
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        alert("Failed to sign up...");
+
+        // let user know what's the problem
         $(".errorMessage").text(error);
     });
 });
+
 
 $("#signOut").on("click", function() {
     firebase.auth().signOut().catch(function(error) {
@@ -63,7 +67,7 @@ firebase.auth().onAuthStateChanged(person => {
             call: call
                 //insert google calender stuff to save
         });
-        window.location = 'innerPage.html';
+        // window.location = 'innerPage.html';
     }
     //STOP INFINITE LOOP
     else if (window.location.href.includes("signUp")) {
