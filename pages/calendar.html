@@ -35,6 +35,24 @@
         /**
          *  On load, called to load the auth2 library and API client library.
          */
+         function onSuccess(googleUser) {
+              console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+            }
+            function onFailure(error) {
+              console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render('authorize_button', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+              });
+            }
+
         function handleClientLoad() {
             gapi.load('client:auth2', initClient);
         }
@@ -127,7 +145,7 @@
             });
         }
     </script>
-
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 
