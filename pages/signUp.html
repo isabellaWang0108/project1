@@ -12,12 +12,13 @@
 </head>
 
 <body>
-
-    <div id="allTheSignUp">
-        <button class="signIn" onclick="location.href='signIn.html'">Sign in</button>
-        <img src="../assets/images/logo.png" id="logo">
+  
+  <div id="allTheSignUp">  
+        <button class="signIn" onclick="location.href='pages/signIn.html'">Sign in</button>
+        <img src="../assets/images/logo.png" id="logo"> 
 
         <h2 class="animated slideInUp fast">Tell us about you</h2>
+
 
         <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
         <input type="tel" class="animated fadeIn slow" id="number" placeholder="Your Phone Number 0000000000">
@@ -39,6 +40,7 @@
                 </div>
             </div>
 
+
             <!-- checkbox for call -->
             <div class="pretty p-default p-fill">
                 <input type="checkbox" id="callChecked" />
@@ -57,12 +59,16 @@
 
     </div>
     <div class="background"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="../scripts/notification.js"></script>
     <script src="../scripts/account.js"></script>
     <script src="../scripts/calendar.js"></script>
+
     <script src="../scripts/notification.js"></script>
 
 </body>

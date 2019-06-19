@@ -38,6 +38,7 @@ const from = '13852403539';
 // set message receiver
 var to = '19083916750';
 // make the text dynamic
+
 var linkInText = "https://www.google.com/maps/dir/?api=1&origin=" + origin + "&destination=" + destination;
 const text = 'Hello, this is Dear Time. Thanks for subscribing us. We will help you to get to your place on time. Click here to see the route: ' + linkInText;
 
