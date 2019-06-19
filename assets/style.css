@@ -34,7 +34,9 @@ th,
 
 p,
 label,
-span {
+span,
+.textForCalendar
+ {
     font-family: SuisseIntl-Regular;
 }
 
@@ -83,6 +85,13 @@ h5 {
 p {
     font-size: 16px;
 }
+.textForCalendar{
+    padding: 10px 0 10px 0;
+    white-space: pre-wrap;
+    line-height: 30px;
+    grid-column: 3/11;
+}
+
 
 #allTheSignUp,
 #allTheSignIn,
