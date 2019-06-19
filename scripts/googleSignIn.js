@@ -29,6 +29,10 @@ var signoutButton = document.getElementById('signout_button');
       });
     }
 
+    $("#authorize_button").on("click",function(){
+        $("#allTheSignUp").hide();
+    })
+
 function handleClientLoad() {
     gapi.load('client:auth2', initClient);
 }

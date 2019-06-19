@@ -90,6 +90,9 @@ p {
     white-space: pre-wrap;
     line-height: 30px;
     grid-column: 3/11;
+    z-index:3;
+    font-size:18px;
+    margin-top:50px;
 }
 
 
@@ -97,17 +100,17 @@ p {
 #allTheSignIn,
 #allTheInnerPage,
 #allTheIndex,
-#questions {
+#signOut {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(12, 1fr);
     position:absolute;
 }
-#questions{
-    z-index:3;
+#signOut{
+    z-index:2;
 }
 #allTheSignUp{
-    z-index:2;
+    z-index:3;
 }
 .columnForIntros {
     grid-column: 4/10;

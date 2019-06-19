@@ -48,16 +48,26 @@
             
             <!-- After users sync the calendar, button Ready to go shows up -->
             <div id="authorize_button" style="display: none;"></div>
-            <button id="signout_button" style="display: none;">Sign Out</button>
+           
  
         </section>
-        <pre id="content" class="textForCalendar" style="white-space: pre-wrap;"></pre>
         <div class="background"></div>
 
-
-
-
     </div>
+
+        <div id="signOut">
+                <div class="topBar"></div>
+                <h2 class="innerPage">Your Events</h2>
+                <!-- search function is here -->
+                <label><img src="../assets/images/search.png"></label>
+                <input type="search" id="siteSearch" placeholder="Search event by name or date">
+                <button id="signout_button" style="display: none;">Sign Out</button>
+ 
+ 
+                <pre id="content" class="textForCalendar" style="white-space: pre-wrap;"></pre>
+        </div>
+
+
     <script type="text/javascript" src="../scripts/googleSignIn.js">
  
     </script>
