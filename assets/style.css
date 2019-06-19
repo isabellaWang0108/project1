@@ -102,7 +102,10 @@ p {
     /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom, #FBD384, #E5616F);
 }
-
+.errorMessage{
+    color:#AC1212;
+    margin-top:-2em;
+}
 button {
     background-color: #2A80E5;
     border: none;

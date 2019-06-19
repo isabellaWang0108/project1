@@ -14,6 +14,11 @@ var database = firebase.database();
 var uid;
 var user;
 
+// phone number formatting
+$(document).ready(function(){
+    $("#number").inputmask({"mask": "(999) 999-9999"}); 
+  });
+
 //sign up on click
 $("#signUp").on("click", function() {
     var email = $("#email").val();
@@ -35,6 +40,9 @@ $("#signUp").on("click", function() {
         redirectIn();
     }).catch(function(error) {
         alert("Failed to sign up...");
+        console.log(error);
+        // let user know what's the problem
+        $(".errorMessage").text(error);
     });
 });
 

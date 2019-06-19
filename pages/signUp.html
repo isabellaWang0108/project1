@@ -20,7 +20,7 @@
     <h2 class="animated slideInUp fast">Tell us about you</h2>
 
     <input type="text" class="animated fadeIn slow" id="name" placeholder="Your First Name">
-    <input type="tel" class="animated fadeIn slow" id="number" placeholder="Your Phone Number 0000000000">
+    <input type="tel" class="animated fadeIn slow" id="number" placeholder="Phone Number ex. 10000000000">
     <input type="email" class="animated fadeIn slow" id="email" placeholder="Email xxxx@xxx.com">
     <input type="password" class="animated fadeIn slow" id="password" placeholder="Password">
 
@@ -35,7 +35,7 @@
         <div class="pretty p-default p-fill">
             <input type="checkbox" id="textChecked" checked/>
             <div class="state p-sucess">
-                <label>Notification</label><span> (Required)</span>
+                <label>Text</label><span> (Required)</span>
             </div>
         </div>
 
@@ -47,9 +47,10 @@
             </div>
         </div>
         <br>
-
+        
         <!-- This is where you sync the Google Doc -->
         <button class="calendars" id="googleCalendar">link your Google Calendar</button>
+        <p class="errorMessage"></p>
         <!-- After users sync the calendar, button Ready to go shows up -->
         <button id="signUp">Ready to Go!</button>
 
@@ -58,12 +59,14 @@
    </div>
    <div class="background"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="../scripts/notification.js"></script>
     <script src="../scripts/account.js"></script>
     <script src="../scripts/calendar.js"></script>
-    <script src="../scripts/notification.js"></script>
+
 
 </body>
 
