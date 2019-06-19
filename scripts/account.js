@@ -14,12 +14,20 @@ var database = firebase.database();
 var uid;
 var user;
 
+// phone number formatting
+$(document).ready(function() {
+    $("#number").inputmask({ "mask": "(999) 999-9999" });
+});
+
+
 //sign up on click
 $("#signUp").on("click", function() {
     var email = $("#email").val();
     var password = $("#password").val();
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
         alert("Failed to sign up...");
+        // let user know what's the problem
+        $(".errorMessage").text(error);
     });
 });
 
