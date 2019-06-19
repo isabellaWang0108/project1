@@ -90,6 +90,7 @@ p {
 #allTheIndex,
 #questions {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(12, 1fr);
     position:absolute;
 }
