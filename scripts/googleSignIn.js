@@ -29,10 +29,6 @@ var signoutButton = document.getElementById('signout_button');
       });
     }
 
-    $("#authorize_button").on("click",function(){
-        $("#allTheSignUp").css("display","none");
-        $("#signOut").css("z-index","4");
-    })
 
 function handleClientLoad() {
     gapi.load('client:auth2', initClient);
@@ -67,6 +63,8 @@ function updateSigninStatus(isSignedIn) {
         authorizeButton.style.display = 'none';
         signoutButton.style.display = 'block';
         listUpcomingEvents();
+        $("#allTheSignUp").css("display","none");
+        $("#signOut").css("z-index","4");
     } else {
         authorizeButton.style.display = 'block';
         signoutButton.style.display = 'none';
