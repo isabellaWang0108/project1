@@ -119,7 +119,7 @@ function listUpcomingEvents() {
                 }
                 $(".event").html("<h4 class='eventTitle'>"+ event.summary+"</h4>"+
                                 "<p class='address'>"+ when.slice(0,10) +"</p>" +
-                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when.slice(10,5)+"</bold>"+ "</p>"+
+                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when.slice(10,15)+"</bold>"+ "</p>"+
                                 "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+5+"'>mins ahead</p>")
    
             }
