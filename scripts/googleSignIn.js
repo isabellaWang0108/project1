@@ -11,6 +11,10 @@ var signoutButton = document.getElementById('signout_button');
 /**
  *  On load, called to load the auth2 library and API client library.
  */
+$(document).ready(function(){
+    $("#number").inputmask({"mask": "(999) 999-9999"}); 
+  });
+  
  function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
