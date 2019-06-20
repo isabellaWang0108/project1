@@ -30,7 +30,8 @@ var signoutButton = document.getElementById('signout_button');
     }
 
     $("#authorize_button").on("click",function(){
-        $("#allTheSignUp").hide();
+        $("#allTheSignUp").css("display","none");
+        $("#signOut").css("z-index","4");
     })
 
 function handleClientLoad() {
