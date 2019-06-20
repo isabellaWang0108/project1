@@ -112,9 +112,9 @@ function listUpcomingEvents() {
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
-                var when = moment(event.start.dateTime).format("L") + ' ' + moment(event.start.dateTime).format("LT");
+                var when = moment(event.start.date).format("L") + ' ' + moment(moment.utc(event.start.dateTime).startOf('day').format('LL')).startOf('day').toDate();
                 if (!when) {
-                    when = moment(event.start.dateTime).format("L") + ' ' + moment(event.start.dateTime).format("LT");
+                    when = moment(event.start.date).format("L") + ' ' + moment(moment.utc(event.start.dateTime).startOf('day').format('LL')).startOf('day').toDate();
                 }
                 appendPre(event.summary + ' (' + when + ')' + ' ' + event.location + ' ')
                     // event.location
