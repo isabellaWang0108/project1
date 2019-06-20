@@ -11,18 +11,20 @@ var signoutButton = document.getElementById('signout_button');
 /**
  *  On load, called to load the auth2 library and API client library.
  */
-$(document).ready(function(){
-    $("#number").inputmask({"mask": "(999) 999-9999"}); 
-  });
-  
- function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('authorize_button', {
+$(document).ready(function() {
+    $("#number").inputmask({ "mask": "(999) 999-9999" });
+});
+
+function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+}
+
+function onFailure(error) {
+    console.log(error);
+}
+
+function renderButton() {
+    gapi.signin2.render('authorize_button', {
         'scope': 'profile email',
         'width': 240,
         'height': 50,
@@ -30,8 +32,8 @@ $(document).ready(function(){
         'theme': 'dark',
         'onsuccess': onSuccess,
         'onfailure': onFailure
-      });
-    }
+    });
+}
 
 
 
@@ -68,8 +70,8 @@ function updateSigninStatus(isSignedIn) {
         authorizeButton.style.display = 'none';
         signoutButton.style.display = 'block';
         listUpcomingEvents();
-        $("#allTheSignUp").css("display","none");
-        $("#signOut").css("z-index","4");
+        $("#allTheSignUp").css("display", "none");
+        $("#signOut").css("z-index", "4");
     } else {
         authorizeButton.style.display = 'block';
         signoutButton.style.display = 'none';
@@ -94,7 +96,7 @@ function handleSignoutClick(event) {
  * appropriate message is printed.
  */
 
-   
+
 function listUpcomingEvents() {
     gapi.client.calendar.events.list({
         'calendarId': 'primary',
@@ -105,30 +107,31 @@ function listUpcomingEvents() {
         'orderBy': 'startTime'
     }).then(function(response) {
         var events = response.result.items;
-        $(".date").html(" <div class='bullet'></div>"+"The Upcoming Events: ");
+        $(".date").html(" <div class='bullet'></div>" + "The Upcoming Events: ");
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
                 var when = event.start.dateTime;
-                var address=event.location;
-                
+                var address = event.location;
+
                 if (!when) {
-                    when = event.start.dateTime;
-                    
+                    when = moment(event.start.dateTime).format("L") + ' ' +
+                        moment(event.start.dateTime).format("LT");
+
                 }
-                var eventt=$("<div>");
-                eventt.attr("class","event")
-                       .html("<h4 class='eventTitle'>"+event.summary +"</h4>"+
-                                            "<p class='address'>"+ address +"</p>" +
-                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when+"</bold>"+ "</p>"+
-                                            "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+$('#preferredTime').val()+"'>mins ahead</p>");
-               $("#container-for-content").append(eventt);
-            
-            
+                var eventt = $("<div>");
+                eventt.attr("class", "event")
+                    .html("<h4 class='eventTitle'>" + event.summary + "</h4>" +
+                        "<p class='address'>" + address + "</p>" +
+                        "<p class='arrivalTimeClass'>" + "arrival time: " + "<bold class='arrivalTime'>" + when + "</bold>" + "</p>" +
+                        "<p class='minutesBeforeClass'>" + "arrive" + "<input type='text' class='minuteBefore' value='" + $('#preferredTime').val() + "'>mins ahead</p>");
+                $("#container-for-content").append(eventt);
+
+
             }
         } else {
             $(".date").text('No upcoming events found.');
-            
+
         }
     });
 }
