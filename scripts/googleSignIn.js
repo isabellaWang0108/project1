@@ -114,12 +114,15 @@ function listUpcomingEvents() {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
                 var when = event.start.dateTime;
+                var time=when.toString();
+                console.log(time);
                 if (!when) {
                     when = event.start.dateTime;
+                    console.log(when);
                 }
                 $(".event").html("<h4 class='eventTitle'>"+ event.summary+"</h4>"+
-                                "<p class='address'>"+ when.slice(0,10) +"</p>" +
-                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when.slice(10,15)+"</bold>"+ "</p>"+
+                                "<p class='address'>"+ time.slice(0,10) +"</p>" +
+                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+time.slice(10,15)+"</bold>"+ "</p>"+
                                 "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+5+"'>mins ahead</p>")
    
             }
