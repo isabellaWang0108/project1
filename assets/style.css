@@ -150,9 +150,7 @@ button {
     position: absolute;
     right: 2%;
 }
-#allTheSignUp{
-    display:none;
-}
+
 
 button:hover {
     background-color: black;
@@ -443,8 +441,14 @@ input[type=text].minuteBefore {
         margin-top: 20vw;
     }
     button.signIn {
-
+        font-size: 10px;
         margin-top:0;
+        margin-right: -20px;
+    }
+    #signout_button{    
+        margin-top: 5px;
+        font-size: 16px;
+        margin-right: -20px;
     }
 
     input[type=text],
@@ -529,5 +533,8 @@ input[type=text].minuteBefore {
     .topBar{
         height:10em;
 
+    }
+    #getStarted{
+        grid-column: 3/11;
     }
 }
