@@ -124,9 +124,9 @@ function listUpcomingEvents() {
                 }
                 var eventt=$("<div>");
                 eventt.attr("class","event")
-                       .html("<h4 class='eventTitle'>"+event.summary +"</h4>"+
-                                            "<p class='address'>"+ when +"</p>" +
-                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when+"</bold>"+ "</p>"+
+                       .html("<h4 class='eventTitle'>"+"hi" +"</h4>"+
+                                            "<p class='address'>"+ "when" +"</p>" +
+                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+"when"+"</bold>"+ "</p>"+
                                             "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+"5"+"'>mins ahead</p>");
                $("#container-for-content").append(eventt);
             
