@@ -19,9 +19,7 @@ $("#next").on("click",function(){
 })
 // phone number formatting
 
-$(document).ready(function(){
-    $("#number").inputmask({"mask": "(999) 999-9999"}); 
-  });
+
 
 //sign up on click
 $("#googleCalendar").on("click", function() {

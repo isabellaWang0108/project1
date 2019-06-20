@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="allTheSignUp">
+    <div id="allTheSignUp">
 
         <h2 class="animated slideInUp fast">Tell us about you</h2>
 
@@ -45,34 +45,33 @@
                 </div>
             </div>
             <br>
-            
+
             <!-- After users sync the calendar, button Ready to go shows up -->
             <div id="authorize_button" style="display: none;"></div>
-            
- 
+
+
         </section>
         <div class="background"></div>
 
     </div>
 
-        <div id="signOut">
-                <div class="topBar"></div>
-                <h2 class="innerPage">Your Events</h2>
-                <!-- search function is here -->
-                <label><img src="../assets/images/search.png"></label>
-                <input type="search" id="siteSearch" placeholder="Search event by name or date">
-                <button id="signout_button" style="display: none;">Sign Out</button>
-             <div id="container-for-content">
-                
-                        <h5 class="date"></h5>
-                
+    <div id="signOut">
+        <div class="topBar"></div>
+        <h2 class="innerPage">Your Events</h2>
+        <!-- search function is here -->
+        <label><img src="../assets/images/search.png"></label>
+        <input type="search" id="siteSearch" placeholder="Search event by name or date">
+        <button id="signout_button" style="display: none;">Sign Out</button>
+        <div id="container-for-content">
 
-              </div>  
+            <h5 class="date"></h5>
+
+
         </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="../scripts/googleSignIn.js">
- 
     </script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
@@ -83,7 +82,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
     <!-- <script src="../scripts/notification.js"></script> -->
-  
+
     <!-- <script src="../scripts/calendar.js"></script> -->
 
     <!-- <script src="../scripts/notification.js"></script> -->
