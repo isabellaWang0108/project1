@@ -112,6 +112,9 @@ p {
 #allTheSignUp{
     z-index:3;
 }
+#test{
+    z-index:10;
+}
 .columnForIntros {
     grid-column: 4/10;
 }
