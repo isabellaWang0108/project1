@@ -112,11 +112,12 @@ function listUpcomingEvents() {
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
-                var when = event.start.dateTime;
+                var when = moment(event.start.dateTime).format("L") + ' ' + moment(event.start.dateTime).format("LT");
                 if (!when) {
-                    when = event.start.date;
+                    when = moment(event.start.dateTime).format("L") + ' ' + moment(event.start.dateTime).format("LT");
                 }
-                appendPre(event.summary + ' (' + when + ')')
+                appendPre(event.summary + ' (' + when + ')' + ' ' + event.location + ' ')
+                    // event.location
             }
         } else {
             appendPre('No upcoming events found.');
