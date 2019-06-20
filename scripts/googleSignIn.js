@@ -115,7 +115,7 @@ function listUpcomingEvents() {
                 var event = events[i];
                 var when = event.start.dateTime;
                 if (!when) {
-                    when = event.start.date;
+                    when = event.start.dateTime;
                 }
                 appendPre(event.summary + ' (' + when + ')')
             }
