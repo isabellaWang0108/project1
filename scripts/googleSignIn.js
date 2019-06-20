@@ -106,8 +106,8 @@ function listUpcomingEvents() {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
                 var when = event.start.dateTime;
-                var date=when.slice(5,10);
-                var hour=when.slice(11,16);
+                var address=event.location;
+                
                 if (!when) {
                     when = event.start.dateTime;
                     
@@ -115,8 +115,8 @@ function listUpcomingEvents() {
                 var eventt=$("<div>");
                 eventt.attr("class","event")
                        .html("<h4 class='eventTitle'>"+event.summary +"</h4>"+
-                                            "<p class='address'>"+ date +"</p>" +
-                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+hour+"</bold>"+ "</p>"+
+                                            "<p class='address'>"+ address +"</p>" +
+                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when+"</bold>"+ "</p>"+
                                             "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+$('#preferredTime').val()+"'>mins ahead</p>");
                $("#container-for-content").append(eventt);
             
