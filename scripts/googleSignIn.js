@@ -30,6 +30,7 @@ var signoutButton = document.getElementById('signout_button');
     }
 
 
+
 function handleClientLoad() {
     gapi.load('client:auth2', initClient);
 }
@@ -112,12 +113,11 @@ function listUpcomingEvents() {
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
-                var when = moment(event.start.date).format("L") + ' ' + moment(event.start.dateTime).format("LT");
+                var when = event.start.dateTime;
                 if (!when) {
-                    when = moment(event.start.date).format("L") + ' ' + moment(event.start.dateTime).format("LT");
+                    when = event.start.date;
                 }
-                appendPre(event.summary + ' (' + when + ')' + ' ' + event.location + ' ')
-                    // event.location
+                appendPre(event.summary + ' (' + when + ')')
             }
         } else {
             appendPre('No upcoming events found.');
