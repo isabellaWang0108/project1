@@ -109,7 +109,7 @@ function listUpcomingEvents() {
         'orderBy': 'startTime'
     }).then(function(response) {
         var events = response.result.items;
-        $(".date").text('Upcoming events:');
+        $(".date").html(" <div class='bullet'></div>"+"The Upcoming Events: ");
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
@@ -117,7 +117,11 @@ function listUpcomingEvents() {
                 if (!when) {
                     when = event.start.dateTime;
                 }
-                appendPre(event.summary +"/" + when.slice(0,10) + '/'+when.slice(10,5))
+                $(".event").html("<h4 class='eventTitle'>"+ event.summary+"</h4>"+
+                                "<p class='address'>"+ when.slice(0,10) +"</p>" +
+                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when.slice(10,5)+"</bold>"+ "</p>"+
+                                "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+5+"'>mins ahead</p>")
+   
             }
         } else {
             $(".date").text('No upcoming events found.');
