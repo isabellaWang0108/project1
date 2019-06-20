@@ -109,7 +109,7 @@ function listUpcomingEvents() {
         'orderBy': 'startTime'
     }).then(function(response) {
         var events = response.result.items;
-        appendPre('Upcoming events:');
+        $(".date").text('Upcoming events:');
         if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
                 var event = events[i];
@@ -117,10 +117,11 @@ function listUpcomingEvents() {
                 if (!when) {
                     when = event.start.dateTime;
                 }
-                appendPre(event.summary + ' (' + when + ')')
+                appendPre(event.summary +"/" + when.slice(0,10) + '/'+when.slice(10,5))
             }
         } else {
-            appendPre('No upcoming events found.');
+            $(".date").text('No upcoming events found.');
+            
         }
     });
 }
