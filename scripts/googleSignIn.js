@@ -99,6 +99,8 @@ function appendPre(message) {
  * the authorized user's calendar. If no events are found an
  * appropriate message is printed.
  */
+
+   
 function listUpcomingEvents() {
     gapi.client.calendar.events.list({
         'calendarId': 'primary',
@@ -120,11 +122,15 @@ function listUpcomingEvents() {
                     when = event.start.dateTime;
                     console.log(when);
                 }
-                $(".event").html("<h4 class='eventTitle'>"+ event.summary+"</h4>"+
-                                "<p class='address'>"+ when +"</p>" +
-                                "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when+"</bold>"+ "</p>"+
-                                "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+5+"'>mins ahead</p>")
-   
+                var eventt=$("<div>");
+                eventt.attr("class","event")
+                       .html("<h4 class='eventTitle'>"+event.summary +"</h4>"+
+                                            "<p class='address'>"+ when +"</p>" +
+                                            "<p class='arrivalTimeClass'>"+ "arrival time: "+"<bold class='arrivalTime'>"+when+"</bold>"+ "</p>"+
+                                            "<p class='minutesBeforeClass'>"+"arrive"+"<input type='text' class='minuteBefore' value='"+"5"+"'>mins ahead</p>");
+               $("#container-for-content").append(eventt);
+            
+            
             }
         } else {
             $(".date").text('No upcoming events found.');
