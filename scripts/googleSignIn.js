@@ -116,9 +116,7 @@ function listUpcomingEvents() {
                 if (!when) {
                     when = moment(event.start.date).format("L") + ' ' + moment(event.start.dateTime).format("LT");
                 }
-              var title= event.summary;
-              var address=event.location;
-                appendPre(title + ' (' + when + ')' + ' ' + address + ' ');
+                appendPre(event.summary + ' (' + when + ')' + ' ' + event.location + ' ')
                     // event.location
             }
         } else {
