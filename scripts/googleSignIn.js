@@ -113,9 +113,10 @@ function listUpcomingEvents() {
                 var event = events[i];
                 var when = event.start.dateTime;
                 var address = event.location;
-
+                var time = moment(event.start.dateTime).format("L") + ' ' +
+                    moment(event.start.dateTime).format("LT");
                 if (!when) {
-                    when = moment(event.start.dateTime).format("L") + ' ' +
+                    time = moment(event.start.dateTime).format("L") + ' ' +
                         moment(event.start.dateTime).format("LT");
 
                 }
@@ -123,7 +124,7 @@ function listUpcomingEvents() {
                 eventt.attr("class", "event")
                     .html("<h4 class='eventTitle'>" + event.summary + "</h4>" +
                         "<p class='address'>" + address + "</p>" +
-                        "<p class='arrivalTimeClass'>" + "arrival time: " + "<bold class='arrivalTime'>" + when + "</bold>" + "</p>" +
+                        "<p class='arrivalTimeClass'>" + "arrival time: " + "<bold class='arrivalTime'>" + time + "</bold>" + "</p>" +
                         "<p class='minutesBeforeClass'>" + "arrive" + "<input type='text' class='minuteBefore' value='" + $('#preferredTime').val() + "'>mins ahead</p>");
                 $("#container-for-content").append(eventt);
 
@@ -134,4 +135,15 @@ function listUpcomingEvents() {
 
         }
     });
+
+    $("#siteSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".event").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 }
+
+$("#signout_button").on("click", function() {
+    window.location = "../index.html"
+})
