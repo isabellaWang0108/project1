@@ -1,13 +1,13 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBN7LY1mgo8xNyiqviHoMbxTnrT4whKLXM",
-    authDomain: "project-1-b691a.firebaseapp.com",
-    databaseURL: "https://project-1-b691a.firebaseio.com",
-    projectId: "project-1-b691a",
-    storageBucket: "project-1-b691a.appspot.com",
-    messagingSenderId: "904494310957",
-    appId: "1:904494310957:web:f844b97c354d9a11",
+    apiKey: "AIzaSyDRiwxncwtOHgblmwfGUY6B3maQlm3NFCI",
+    authDomain: "deartime-61c5a.firebaseapp.com",
+    databaseURL: "https://deartime-61c5a.firebaseio.com",
+    projectId: "deartime-61c5a",
+    storageBucket: "deartime-61c5a.appspot.com",
+    messagingSenderId: "998695225334",
+    appId: "1:998695225334:web:034a85753378a81496e9d7",
 
-    clientId: "904494310957-oklsneorfb6ooh4sc8t21rpnho5hir03.apps.googleusercontent.com",
+    clientId: "998695225334-aaiipl2o5b7cfrv8ckcnlgg178g3pmsi.apps.googleusercontent.com",
 
     scopes: ["email", "profile",
         "https://www.googleapis.com/auth/calendar"
@@ -21,7 +21,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var uiConfig = {
-    signInSuccessUrl: "localhost:5000",
+    signInSuccessUrl: "localhost:8000",
     signInOptions: [{
         provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         scopes: config.scopes
@@ -36,9 +36,9 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start("#firebaseui-auth-container", uiConfig);
 
 // This function will trigger when there is a login event
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
     console.log(user)
-        // Make sure there is a valid user object
+    // Make sure there is a valid user object
     if (user) {
         var script = document.createElement("script");
         script.type = "text/javascript";
@@ -46,7 +46,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
         // Once the Google API Client is loaded, you can run your code
-        script.onload = function(e) {
+        script.onload = function (e) {
             // Initialize the Google API Client with the config object
             gapi.client
                 .init({
@@ -56,7 +56,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     scope: config.scopes.join(" ")
                 })
                 // Loading is finished, so start the app
-                .then(function() {
+                .then(function () {
                     // Make sure the Google API Client is properly signed in
                     if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
                         startApp(user);
@@ -75,7 +75,7 @@ function startApp(user) {
 
     // Make sure to refresh the Auth Token in case it expires!
     firebase.auth().currentUser.getToken()
-        .then(function() {
+        .then(function () {
             return gapi.client.calendar.events
                 .list({
                     calendarId: "primary",
@@ -86,7 +86,7 @@ function startApp(user) {
                     orderBy: "startTime"
                 })
         })
-        .then(function(response) {
+        .then(function (response) {
             console.log(response);
         });
 }
